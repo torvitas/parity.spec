@@ -1,14 +1,14 @@
-Name:		parity
-Version:	1.6.10
-Release:	1%{?dist}
-Summary:	Fast, light, robust Ethereum implementation
+Name:   parity
+Version:  1.7.0
+Release:  1%{?dist}
+Summary:  Ethereum browser
 
-License:	GPL-3.0
-URL:		https://parity.io/parity.html
-Source0:	https://github.com/paritytech/parity/archive/v1.6.10.tar.gz
+License:  GPLv3
+URL:    https://parity.io/parity.html
+Source0:  https://github.com/paritytech/parity/archive/v%{version}.tar.gz#/%{name}-%{version}.tar.gz
 
 # systemd-devel for libudev.h
-BuildRequires:	rust cargo git gcc-c++ openssl-devel systemd-devel
+BuildRequires:  rust cargo git gcc-c++ openssl-devel systemd-devel
 
 %description
 Fast, light, and robust Ethereum implementation
@@ -30,6 +30,7 @@ install -p -m 755 target/release/parity %{buildroot}%{_bindir}
 %{_bindir}/parity
 
 %changelog
-* Wed Jun 26 2017 Timothée Floure <fnux@fnux.ch> - 1.6.10-1
+* Thu Aug 17 2017 Timothée Floure <fnux@fnux.ch> - 1.7.0-1
+- Update to 1.7.0
+* Mon Jun 26 2017 Timothée Floure <fnux@fnux.ch> - 1.6.10-1
 - Initial build
-
