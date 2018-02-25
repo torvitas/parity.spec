@@ -1,5 +1,5 @@
 Name:   parity
-Version:  1.7.0
+Version:  1.9.3
 Release:  1%{?dist}
 Summary:  Ethereum browser
 
@@ -30,6 +30,8 @@ install -p -m 755 target/release/parity %{buildroot}%{_bindir}
 %{_bindir}/parity
 
 %changelog
+* Sun Feb 25 2018 Sascha Marcel Schmidt <mail@saschaschmidt.net> - 1.9.3-1
+- Update to 1.9.3
 * Thu Aug 17 2017 Timothée Floure <fnux@fnux.ch> - 1.7.0-1
 - Update to 1.7.0
 * Mon Jun 26 2017 Timothée Floure <fnux@fnux.ch> - 1.6.10-1
